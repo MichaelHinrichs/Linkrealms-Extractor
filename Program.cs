@@ -1,4 +1,5 @@
-﻿using System;
+//Written for Linkrealms. https://steamcommunity.com/app/402450/
+using System;
 using System.IO;
 
 namespace Linkrealms_Extractor
