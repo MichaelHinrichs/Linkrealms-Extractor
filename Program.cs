@@ -26,6 +26,7 @@ namespace Linkrealms_Extractor
                 });
             }
 
+            br = new(File.OpenRead(Path.GetDirectoryName(args[0]) + "//" + Path.GetFileNameWithoutExtension(args[0]) + ".pak"));
             foreach (Subfile file in data)
             {
                 br.BaseStream.Position = file.start;
