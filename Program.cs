@@ -1,5 +1,4 @@
 //Written for Linkrealms. https://steamcommunity.com/app/402450/
-using System;
 using System.IO;
 
 namespace Linkrealms_Extractor
@@ -9,7 +8,7 @@ namespace Linkrealms_Extractor
         static void Main(string[] args)
         {
             string path = Path.GetDirectoryName(args[0]);
-            path = path.Remove(path.IndexOf("\\resources"));
+            path = path[..path.IndexOf("\\resources")];
             BinaryReader br = new(File.OpenRead(Path.GetDirectoryName(args[0]) + "//" + Path.GetFileNameWithoutExtension(args[0]) + ".idx"));
 
             System.Collections.Generic.List<Subfile> data = new();
